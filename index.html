@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>dev0l</title>
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/1.9.33/css/materialdesignicons.css"
+    media="all" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/clock.css" />
+</head>
+
+<body>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper grey darken-4">
+
+        <!-- navbar-LEFT -->
+        <div class="essentials">
+          <a href="javascript:void(0);" id="essentials-btn" class="btn-floating btn-large halfway-fab waves-effect waves-light grey darken-3 tooltipped"
+            data-position="top" data-tooltip="Essentials" data-delay="200" data-activates="essentials-sidenav">
+                <i class="material-icons">apps</i>
+              </a>
+        </div>
+
+        <a href="/" class="brand-logo"><img class="responsive-img circle" src="./assets/img/logo/01ev1.6.png" alt="dev0l"></a>
+        <!--<a href="javascript:void(0);" data-activates="mobile-sidenav" class="button-collapse"><i class="material-icons">menu</i></a>-->
+
+        <ul class="left hide-on-med-and-down">
+          <li>
+            <div class="nav-search-wrapper">
+              <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- /navbar-LEFT -->
+
+        <!-- navbar-RIGHT -->
+        <!-- <ul class="right hide-on-med-and-down">
+          <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a [routerLink]="['/dashboard']" class="waves-effect waves-block waves-light dashboard-button">
+                <i class="material-icons">bubble_chart</i>
+                </a>
+          </li>
+
+          <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+            <a [routerLink]="['/register']" class="waves-effect waves-block waves-light register-button">
+                <i class="material-icons">person_add</i>
+                </a>
+          </li>
+          <li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">Logout</a></li>
+        </ul> -->
+
+        <div class="profile">
+          <a href="javascript:void(0);" id="profile-btn" class="btn-floating btn-large halfway-fab waves-effect waves-light grey darken-3 tooltipped"
+            data-position="top" data-tooltip="Profile" data-delay="200" data-activates="profile-sidenav">
+                <i class="material-icons">account_circle</i>
+                <!--<i class="mdi mdi-account"></i>-->
+          </a>
+        </div>
+        <!-- /navbar -->
+
+      </div>
+    </nav>
+  </div>
+  <!-- /navbar -->
+
+  <!-- SideNavs -->
+  <!-- LEFT - Essentials SideNav -->
+  <ul id="essentials-sidenav" class="side-nav">
+    <li class="center-align">
+      <h3>Essentials</h3>
+    </li>
+    <li><a href="javascript:void(0);" class="dropdown-button waves-effect waves-block waves-light email-button mdi mdi-email-outline"
+        data-activates="emails-dropdown"><small class="email-badge">5</small></a></li>
+    <li><a href="javascript:void(0);" class="dropdown-button waves-effect waves-block waves-light notification-button mdi mdi-bell-outline"
+        data-activates="notifications-dropdown"><small class="notification-badge">5</small></a>
+    </li>
+    <li class="divider"></li>
+    <!-- <li><a href="#!" class="mdi mdi-power">SignIn/SignOut</a></li> -->
+    <!-- <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="mdi mdi-power" [routerLink]="['/login']">Login</a></li>
+    <li *ngIf="authService.loggedIn()"><a class="mdi mdi-power" (click)="onLogoutClick()" href="#">Logout</a></li> -->
+  </ul>
+
+  <!-- RIGHT - Profile SideNav -->
+  <ul id="profile-sidenav" class="side-nav right">
+    <li class="center-align">
+      <h3>Profile</h3>
+    </li>
+    <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a href="#!" class="mdi mdi-face">Me</a></li>
+    <!-- <li><a href="/blog.html" class="mdi mdi-face">Blog</a></li> -->
+    <li class="divider"></li>
+    <!--<li><a href="#!" class="mdi mdi-power">SignIn/SignOut</a></li>-->
+    <!-- <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="mdi mdi-power" [routerLink]="['/login']">Login</a></li>
+    <li *ngIf="authService.loggedIn()"><a class="mdi mdi-power" (click)="onLogoutClick()" href="#">Logout</a></li> -->
+  </ul>
+
+  <!-- SideNav Dopdowns -->
+  <!-- Emails Dropdown -->
+  <ul id="emails-dropdown" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+  </ul>
+
+  <!-- Notifications Dropdown (demo @ http://demo.geekslabs.com/materialize-v1.0/index.html) -->
+  <ul id="notifications-dropdown" class="dropdown-content">
+    <li>
+      <h5>Notifications <span class="new badge">5</span></h5>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="#!"><i class="mdi mdi-cart-plus"></i> A new order has been placed!</a>
+      <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">2 hours ago</time>
+    </li>
+    <li>
+      <a href="#!"><i class="mdi-action-stars"></i> Completed the task</a>
+      <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">3 days ago</time>
+    </li>
+    <li>
+      <a href="#!"><i class="mdi-action-settings"></i> Settings updated</a>
+      <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">4 days ago</time>
+    </li>
+    <li>
+      <a href="#!"><i class="mdi-editor-insert-invitation"></i> Director meeting started</a>
+      <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">6 days ago</time>
+    </li>
+    <li>
+      <a href="#!"><i class="mdi-action-trending-up"></i> Generate monthly report</a>
+      <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">1 week ago</time>
+    </li>
+  </ul>
+
+  <!-- container -->
+  <div class="container">
+
+    <div class="row">
+      <ul class="tabs tabs-transparent col s12 center-align">
+        <li class="tab"><a class="active" href="#tab1">Daily Task</a></li>
+        <li class="tab"><a href="#tab2">Tasks</a></li>
+        <li class="tab"><a href="#tab3">Story</a></li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="col s12 center-align">
+        <h1 id="greeting">Welcome</h1>
+        <!-- <h2>{{ user ? user.username : 'Visitor' }}</h2> -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="main" class="col s12">
+        <div id="time">
+          <span id="hours"></span><span id="min"></span><span id="sec"></span><span id="ampm"></span>
+        </div>
+        <div id='days'>
+          <div class="days">sun
+          </div>
+          <div class="days">mon
+          </div>
+          <div class="days">tue
+          </div>
+          <div class="days">wed
+          </div>
+          <div class="days">thu
+          </div>
+          <div class="days">fri
+          </div>
+          <div class="days">sat
+          </div>
+        </div>
+        <div id="fullDate">
+          <span id="month"></span>&nbsp;<span id="date"></span>&nbsp;<span id="year"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="row">
+      <form class="col s12">
+        <div id="tab1" class="input-field col s6 offset-s3">
+          <input id="daily-tab" type="text" class="validate">
+          <label for="daily-tab">What is your main purpose for today?</label>
+        </div>
+        <div id="tab2" class="input-field col s6 offset-s3">
+          <input id="tasks-tab" type="text" class="validate">
+          <label for="tasks-tab">Which tasks should we focus on today?</label>
+        </div>
+        <div id="tab3" class="input-field col s6 offset-s3">
+          <textarea id="story-tab" type="text" class="materialize-textarea"></textarea>
+          <label for="story-tab">What is your story?</label>
+        </div>
+      </form>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- FAB -->
+  <div class="fixed-action-btn click-to-toggle tooltipped" data-position="left" data-tooltip="Information" data-delay="200">
+    <a class="btn-floating btn-large waves-effect waves-light green darken-3">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a href="https://drive.google.com/open?id=1KoRe5W2rJf42PQ02b_fBv3GjzPl8WWpy7ohfE1Jwm_c" target="_blank" class="btn-floating red tooltipped" data-position="left" data-tooltip="Cover Letter"><i class="material-icons">attachment</i></a></li>
+      <li><a href="https://drive.google.com/open?id=17-j4ESUAmDCN4URF5nR-x1w3RfZzxDIhem06OJZ6B6I" target="_blank" class="btn-floating yellow darken-1 tooltipped" data-position="left" data-tooltip="Curriculum Vitae"><i class="material-icons">attachment</i></a></li>
+      <li><a href="https://drive.google.com/open?id=16B9X6vqc-ybOlHoU4O1MtYPlelbBzERbDYTCkogCGHA" target="_blank" class="btn-floating green tooltipped" data-position="left" data-tooltip="Agile Development"><i class="material-icons">attachment</i></a></li>
+      <li><a href="https://drive.google.com/open?id=1cuwbYOy0jDO40YUHuCy7zw05mAO_gi2B3RqoTKCfFhg" target="_blank" class="btn-floating blue tooltipped" data-position="left" data-tooltip="Leadership"><i class="material-icons">attachment</i></a></li>
+    </ul>
+  </div>
+
+  <!-- Tap Target -->
+  <!-- Element Showed -->
+  <div class="tap">
+    <a id="tap-menu" onclick="$('.tap-target').tapTarget('open')" class="waves-effect waves-light btn btn-floating btn-large red"><i class="material-icons">bubble_chart</i></a>
+  </div>
+
+  <!-- Tap Target Structure -->
+  <div class="tap-target grey" data-activates="tap-menu">
+    <div class="tap-target-content white-text">
+      <h5>Marcus Mobark [dev0l]</h5>
+      <p>...in progress...</p>
+    </div>
+  </div>
+
+  <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <script src="./assets/js/clock.js"></script>
+
+  <script>
+    // Left SideNav (Essentials)
+    $('#essentials-btn').sideNav();
+
+    // Right SideNav (Profile)
+    $('#profile-btn').sideNav({
+      menuWidth: 300,
+      edge: 'right',
+      closeOnClick: true
+    });
+
+    $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    });
+  </script>
+
+</body>

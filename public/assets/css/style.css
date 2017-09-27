@@ -1,0 +1,261 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*-----------------------
+	Global
+-----------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Orbitron:700,900,500,400);
+
+/*html {
+  width: 100%;
+  height: 100%
+}*/
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  background-image: url(../img/wallpapers/pexels-photo-27117.jpg);
+  background-repeat: no-repeat;
+  color: paleturquoise;
+  align-items: center;
+  justify-content: center;
+}
+
+#greeting {
+  color: white;
+}
+
+
+/*-----------------------
+	Dropdowns
+-----------------------*/
+
+
+/*#notifications-dropdown {
+
+}*/
+
+
+/*.dropdown-content {
+  width: auto !important;
+}*/
+
+
+/*-----------------------
+	Input Field
+-----------------------*/
+
+
+/* Default */
+
+
+/* label color */
+
+.input-field label {
+  color: white;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+  color: #3e9b00 !important;
+}
+
+
+/* label underline & text focus color */
+
+.input-field input[type=text]:focus {
+  color: white;
+  border-bottom: 1px solid #3e9b00 !important;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #3e9b00 !important;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid red;
+  /*box-shadow: 0 1px 0 0 #000;*/
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+  color: #000;
+}
+
+
+/*-----------------------
+	NavBar
+-----------------------*/
+
+.navbar-fixed {
+  overflow: hidden;
+}
+
+.nav-wrapper {
+  padding: 0 90px 0 105px;
+}
+
+
+/*.mobile-btn {
+  width: 45px;
+  margin-left: 80px;
+}*/
+
+#essentials-btn {
+  position: fixed;
+  left: 24px;
+  top: 28px;
+}
+
+nav .brand-logo {
+  max-height: 64px;
+}
+
+.nav-search-wrapper {
+  width: 300px;
+  margin: 0 0 0 150px;
+}
+
+#search {
+  height: 4rem;
+}
+
+#search:focus {
+  background-color: transparent;
+  border-bottom: 1px solid #3e9b00;
+  color: white;
+}
+
+nav .mdi {
+  height: 64px;
+}
+
+nav .mdi.active,
+.mdi:hover,
+.btn-floating:hover,
+.material-icons:hover {
+  color: paleturquoise;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#profile-btn {
+  position: fixed;
+  right: 24px;
+  top: 28px;
+}
+
+
+/*-----------------------
+	@Media
+-----------------------*/
+
+@media only screen and (max-width: 601px) {
+  .brand-logo img {
+    height: 54px;
+  }
+}
+
+
+/*-----------------------
+	Clock
+-----------------------*/
+
+#main {
+  width: 100%;
+  height: auto;
+  margin: 50px 0;
+}
+
+#time {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#ampm {
+  font-size: .5em;
+}
+
+#days,
+#fullDate {
+  width: 25%;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  flex: 1;
+  color: #444;
+  text-align: center;
+}
+
+.active {
+  color: paleturquoise;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#fullDate {
+  margin-top: .25em;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#sec {
+  display: inline-block;
+  width: 70px;
+}
+
+
+/*-----------------------
+	Tabs
+-----------------------*/
+
+.tabs {
+  margin-bottom: 80px;
+}
+
+#daily-tab,
+#tasks-tab {
+  height: 5rem;
+}
+
+
+/* label focus color */
+
+#story:focus+label {
+  color: #3e9b00;
+}
+
+
+/* label underline & text focus color */
+
+#story:focus {
+  color: white;
+  border-bottom: 1px solid #3e9b00;
+}
+
+
+/*-----------------------
+	Tap Target
+-----------------------*/
+
+.tap {
+  position: fixed;
+  left: 24px;
+  bottom: 20px;
+}

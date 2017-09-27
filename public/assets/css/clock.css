@@ -1,0 +1,48 @@
+#main {
+  width: 100%;
+  height: auto;
+  margin: 50px 0;
+}
+
+#time {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2.5em;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#ampm {
+  font-size: .5em;
+}
+
+#days,
+#fullDate {
+  width: 25%;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  flex: 1;
+  color: #444;
+  text-align: center;
+}
+
+.active {
+  color: paleturquoise;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#fullDate {
+  margin-top: .25em;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+#sec {
+  display: inline-block;
+  width: 70px;
+}
