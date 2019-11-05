@@ -1,2 +1,2 @@
 # Home
-Simple Homepage using 'Materialize'
+Simple Homepage trying out 'Materialize'
