@@ -8,7 +8,12 @@ $(function () {
       millSec = time.getMilliseconds(),
       millString = millSec.toString().slice(0, -2),
       day = time.getDay(),
-      ampm = hours >= 12 ? 'PM' : 'AM',
+
+      /** 12 Hour Clock (AM/PM) **/
+
+      // ampm = hours >= 12 ? 'PM' : 'AM',
+      // ampm = hours >= 24,
+
       month = time.getMonth(),
       date = time.getDate(),
       year = time.getFullYear(),
@@ -17,10 +22,11 @@ $(function () {
       ];
 
     //convert hours from military time and add the am or pm
-    //if (hours > 11) $('#ampm').text(ampm);
-    $('#ampm').text(ampm)
-    if (hours > 12) hours = hours % 12;
-    if (hours == 0) hours = 12;
+    // EXAMPLE: if (hours > 11) $('#ampm').text(ampm);
+
+    // $('#ampm').text(ampm)
+    // if (hours > 12) hours = hours % 12;
+    // if (hours == 0) hours = 12;
 
     //add leading zero for min and sec 
     if (sec <= 9) sec = "0" + sec;
